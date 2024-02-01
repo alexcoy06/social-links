@@ -1,0 +1,110 @@
+//Root elements
+$text: hsl(0, 0%, 100%);
+$alt-text: hsl(75, 94%, 57%);
+$btn: hsl(0, 0%, 20%);
+$main: hsl(0, 0%, 12%);
+$background: hsl(0, 0%, 10%);
+
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 400 600 700;
+  src: url(../assets/fonts/FiraCode-VariableFont_wght.ttf);
+}
+
+// Page setup
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code";
+}
+
+html {
+  font-size: 62.5%;
+  background: $background;
+  color: $text;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Main Container
+main {
+  text-align: center;
+  width: 328px;
+  background: $main;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 1rem;
+  
+  header {
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 20px 0 8px;
+    }
+
+    address {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $alt-text;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin: 20px 0;
+      opacity: .6;
+    }
+
+    img {
+      width: 90px;
+    }
+  }
+
+  ul {
+    width: 280px;
+
+    a{
+      text-decoration: none;
+      color: inherit;
+      
+      li {
+        font-size: 1.2rem;
+        font-weight: 600;
+        list-style-type: none;
+        background: $btn;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 10px 0;
+        
+      }
+      
+      :hover {
+        background: $alt-text;
+        color: black;
+      }
+    }
+    
+  }
+}
+
+// Footer
+footer { 
+  font-size: 1.1rem; 
+  position: absolute;
+  bottom: 1rem; 
+    
+  a { 
+    color: $alt-text; 
+  }
+}
